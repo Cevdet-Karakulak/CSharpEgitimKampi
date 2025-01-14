@@ -102,26 +102,26 @@ namespace _10_DatabaseCrud
             #endregion
 
             #region Ürün Güncelleme İşlemi
-            
-            //Console.Write("Güncellenecek ürün Id: ");
-            //int productId=int.Parse(Console.ReadLine());
 
-            //Console.Write("Güncellenecek ürün adı: ");
-            //string productName=Console.ReadLine();
+            Console.Write("Güncellenecek ürün Id: ");
+            int productId = int.Parse(Console.ReadLine());
 
-            //Console.Write("Güncellenecek ürün fiyatı: ");
-            //decimal productPrice=decimal.Parse(Console.ReadLine());
+            Console.Write("Güncellenecek ürün adı: ");
+            string productName = Console.ReadLine();
 
-            //SqlConnection connection = new SqlConnection("Data Source=FLOPPA\\SS17; initial Catalog=EgitimKampiDb; integrated security=true");
-            //connection.Open();
-            //SqlCommand command=new SqlCommand ("Update TblProduct Set ProductName=@productName, ProductPrice=@productPrice where productId=@productId",connection);
-            //command.Parameters.AddWithValue("@productName",productName);
-            //command.Parameters.AddWithValue("@productPrice",productPrice);
-            //command.Parameters.AddWithValue("@productId",productId);
-            //command.ExecuteNonQuery();
-            //connection.Close();
+            Console.Write("Güncellenecek ürün fiyatı: ");
+            decimal productPrice = decimal.Parse(Console.ReadLine());
 
-            //Console.WriteLine("Güncelleme Başarılı");
+            SqlConnection connection = new SqlConnection("Data Source=FLOPPA\\SS17; initial Catalog=EgitimKampiDb; integrated security=true");
+            connection.Open();
+            SqlCommand command = new SqlCommand("Update TblProduct Set ProductName=@productName, ProductPrice=@productPrice where productId=@productId", connection);
+            command.Parameters.AddWithValue("@productName", productName);
+            command.Parameters.AddWithValue("@productPrice", productPrice);
+            command.Parameters.AddWithValue("@productId", productId);
+            command.ExecuteNonQuery();
+            connection.Close();
+
+            Console.WriteLine("Güncelleme Başarılı");
 
 
             #endregion
