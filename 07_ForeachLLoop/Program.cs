@@ -133,7 +133,6 @@ namespace _07_ForeachLLoop
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine();
             Console.WriteLine("*****C# Egitim Kampi Sınav Uygullaması*****");
 
 
